@@ -3,7 +3,7 @@
 Welcome to the GenAIOps workshop! This course will guide you through building, evaluating, monitoring, and deploying Large Language Model solutions efficiently using Azure AI, Azure Agent Framework , Content Safety, MCP, APIM Gateway and Azure OpenAI. Let's master GenAIOps together!
 
 
-- [Workshop contents](https://microsoft.github.io/llmops-workshop/)
+- [Workshop contents](https://microsoft.github.io/GenAIOps-workshop/)
 - [Change log](CHANGELOG.md)
 
 
