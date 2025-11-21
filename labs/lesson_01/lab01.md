@@ -11,7 +11,7 @@ The focus will be more on an overview of the creation process, so that in the ne
 
 #### Prerequisites
 
-An Azure subscription is required, where you can create an AI Project along with its AI Resource, a Content Safety service ie Guardrails & controls, New Agent Framework and an AI Search service.
+An Azure subscription is required, where you can create an AI Project along with its AI Resource, a Content Safety Service ie Guardrails & Controls, New Agent Framework and an AI Search Service.
 
 #### Setup
 
@@ -33,7 +33,7 @@ Let's start by creating a project in Azure AI Studio.
 
 Go to your browser and type: https://ai.azure.com
 
-Microsoft Foundry portals : There are two different portals for you to use to interact with Microsoft Foundry. A toggle in the portal banner allows you to switch between the two versions.
+Microsoft Foundry portal : There are two different portals for you to use to interact with Microsoft Foundry. A toggle in the portal banner allows you to switch between the two versions. In this lab we will use new AI Foundry version.
 
 ![GenAIOps Workshop](images/2025-11-21-110028.png)
 
@@ -43,11 +43,14 @@ After logging in with your Azure account, toggle to new version of AI Foundry, y
 
 
 [Follow the instrcution to create project in new AI Foundry](https://learn.microsoft.com/en-gb/azure/ai-foundry/how-to/create-projects?view=foundry&tabs=foundry#create-a-foundry-project)
-Sample screen short & steps to create project
 
-Step 1: ![Start Building](images/2025-11-21-114559.png)
-Step 2: ![Create Project](images/2025-11-21-114950.png)
-Step 3: ![Create Project](images/2025-11-21-115841.png)
+Below sample screen short & steps to create project
+
+**Step 1:** ![Start Building](images/2025-11-21-114559.png)
+
+**Step 2:** ![Create Project](images/2025-11-21-114950.png)
+
+**Step 3:** ![Create Project](images/2025-11-21-115841.png)
 ![Create Project](images/2025-11-21-115313.png)
 ![Create Project](images/2025-11-21-115538.png)
 
@@ -57,9 +60,7 @@ Now create LLM Deployment
 
 After creating your AI Project, the first step is to create a deployment of an OpenAI model so you can start experimenting with the prompts you will use in your application.
 
-To do this, access your newly created project in the **Discover** tab of the AI Studio, select the **Models** option, and search on **GPT4**. Select **GPT-4.1** model and click on **Deploy** with **Custom Settings**
-
-![GenAIOps Workshop](images/2025-11-21-131459.png)
+To do this, access your newly created project in the **Discover** tab of the AI Studio, select the **Models** option, and search on **GPT**. Select **GPT-4.1** model and click on **Deploy** with **Custom Settings**
 
 From the list of models, select **gpt-4.1**.
 
@@ -77,22 +78,6 @@ On the next screen, define the name of the deployment, in this case, you can use
 > For Token Limt  select at least 40K **Tokens per Minute Rate Limit*** to ensure the flows run smoothly in the upcoming lessons.
 
 Now, just click on **Deploy** and your model deployment is created. You can now test it in the Playground.
-
-##### Create a Content Safety 
-
-By the end of this lab, you will test with Content Safety. Therefore, click on the following link to create it [https://aka.ms/acs-create](https://aka.ms/acs-create). 
-
-Select the resource group that you previously used for your AI Project. After that, follow the steps presented in the subsequent screens to continue with the creation process, start by clicking on **Review + create** button
-
-![GenAIOps Workshop](images/08.04.2024_14.57.15_REC.png)
-
-Then click on **Create** to create your service.
-
-![GenAIOps Workshop](images/08.04.2024_16.22.06_REC.png)
-
-Done! The Content Safety service is now created.
-
-![GenAIOps Workshop](images/08.04.2024_14.58.21_REC.png)
 
 
 #### Lab Steps
@@ -220,9 +205,9 @@ Select the resource group that you previously used for your AI Project. After th
 
 
 
-By the end of this lab, you will test with Content Safety. You can check and refer [Guardrails & Controls](https://learn.microsoft.com/en-gb/azure/ai-foundry/guardrails/how-to-create-guardrails?view=foundry&tabs=python) 
+By the end of this lab, you will test with Content Safety. You can check and step by step details [Guardrails & Controls](https://learn.microsoft.com/en-gb/azure/ai-foundry/guardrails/how-to-create-guardrails?view=foundry&tabs=python) 
 
-Details and step by step [Guardrails & contral creation](https://learn.microsoft.com/en-gb/azure/ai-foundry/guardrails/how-to-create-guardrails?view=foundry&tabs=python)
+
 
 Then click on **Create** to create your service and follow steps to complete.
 
@@ -239,8 +224,6 @@ Done! The Content Safety service is now created.
 
 ![GenAIOps Workshop](images/2025-11-21-152451.png)
 
-
-![GenAIOps Workshop](images/2025-11-21-152451.png)
 
 Once guardrail is created, Open playground to apply new created guardrail to specific model
 
