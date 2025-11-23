@@ -29,7 +29,7 @@ We'll use the Azure AI Agent Service not only to create the Search, Report, and 
 #### Prerequisites
 
 An Azure subscription is required, where you can create an AI Project along with its AI Resource, a Content Safety Service ie Guardrails & Controls, New Agent Framework and an AI Search Service.
- + Requires GPT-4o and embedding model text-embedding-ada-002
+ + Requires GPT-4o and text-embedding-ada-002
 
 #### Setup
 
@@ -40,18 +40,21 @@ An Azure subscription is required, where you can create an AI Project along with
 1) Use Azure AI Foundry Playground in build mode.
 2) Create workflow orchestration - Use the Sequential pattern.
 3) Create 3 new declarative agents with instructions. 
-  a) Create the Search Agent and configure Azure AI Search
-  b) Create the Report Agent
-  c) Create the Validation Agent
+- a) Create the Search Agent and configure Azure AI Search
+- b) Create the Report Agent
+- c) Create the Validation Agent
 4) Orchestrate the Multi-Agent System
 
 **Step 1:** 
   - In the Azure AI Foundry, go to the project and select 'Build' mode
+
 ![GenAIOps Workshop](images/2025-11-23-173544.png)
 **Step 2:** 
   - Click "workflow" and click "create" Sequential
+
   ![GenAIOps Workshop](images/2025-11-23-172318.png)
   - Once the UI is loaded with the sequential flow, you can edit each individual agent by clicking 'Edit' to configure the LLM models and instructions and tools.
+  
 ![GenAIOps Workshop](images/2025-11-23-172725.png)
 **Step 3:** 
   - Create 3 new declarative agents by editing each agent
