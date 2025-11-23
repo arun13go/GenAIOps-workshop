@@ -33,7 +33,7 @@ An Azure subscription is required, where you can create an AI Project along with
 
 #### Setup
 
-- Follow the lab steps in [Setup in Lab 01](..\lesson_01\lab01.md#Setup)
+- Follow the lab steps in [Setup in Lab 01](../lesson_01/lab01.md#Setup)
 
 #### Lab Steps
 
@@ -47,72 +47,72 @@ An Azure subscription is required, where you can create an AI Project along with
 
 **Step 1:** 
   - In Azure AI Foundry Playground go to project and "Build" mode
-![GenAIOps Workshop](\images\2025-11-23-173544.png)
+![GenAIOps Workshop](images/2025-11-23-173544.png)
 **Step 2:** 
   - Click "workflow" and click "create" Sequential
-  ![GenAIOps Workshop](\images\2025-11-23-172318.png)
+  ![GenAIOps Workshop](images/2025-11-23-172318.png)
   - Once UI loaded with sequential flow, you can edit individual agent by clicking "Edit" to configure the LLM models and instrcutions and tools.
-![GenAIOps Workshop](\images\2025-11-23-172725.png)
+![GenAIOps Workshop](images/2025-11-23-172725.png)
 **Step 3:** 
   - Create 3 new declarative agents by editing the each agents from the sequential workflow
   a) Create Search Agent by editing first agent as shown below
-    ![GenAIOps Workshop](\images\2025-11-23-173851.png)
+    ![GenAIOps Workshop](images/2025-11-23-173851.png)
     + Add follwing instrcutions to the search agent.
       ```
       You are a helpful agent that is an expert at searching health plan documents.
       ```
     + Expand "Tool" and create new AI Search and attach to this agent
-    ![GenAIOps Workshop](\images\2025-11-23-174601.png)
-    ![GenAIOps Workshop](\images\2025-11-23-174704.png)
+    ![GenAIOps Workshop](images/2025-11-23-174601.png)
+    ![GenAIOps Workshop](images/2025-11-23-174704.png)
     Create AI Search service if required
-    ![GenAIOps Workshop](\images\2025-11-23-174910.png)
-    ![GenAIOps Workshop](\images\2025-11-23-175040.png)
-    ![GenAIOps Workshop](\images\2025-11-23-175212.png)
+    ![GenAIOps Workshop](images/2025-11-23-174910.png)
+    ![GenAIOps Workshop](images/2025-11-23-175040.png)
+    ![GenAIOps Workshop](images/2025-11-23-175212.png)
     create new index or use existing index
-    ![GenAIOps Workshop](\images\2025-11-23-175549.png)
+    ![GenAIOps Workshop](images/2025-11-23-175549.png)
     Now upload sample files (sample files in data folder)
-    ![GenAIOps Workshop](\images\2025-11-23-180743.png)
+    ![GenAIOps Workshop](images/2025-11-23-180743.png)
     Once successfully files are uploaded and indexed.. you can see as below
-    ![GenAIOps Workshop](\images\2025-11-23-180929.png)
+    ![GenAIOps Workshop](images/2025-11-23-180929.png)
     Now add Guardrails that we created on lab 1
-    ![GenAIOps Workshop](\images\2025-11-23-181321.png)
-    ![GenAIOps Workshop](\images\2025-11-23-181522.png)
+    ![GenAIOps Workshop](images/2025-11-23-181321.png)
+    ![GenAIOps Workshop](images/2025-11-23-181522.png)
     Finally leave Next action as "Invoke Agent" click on "Done"
-     ![GenAIOps Workshop](\images\2025-11-23-181759.png)
+     ![GenAIOps Workshop](images/2025-11-23-181759.png)
 
   b) Now create Report Agent by editing second agent as shown below.
-    ![GenAIOps Workshop](\images\2025-11-23-183148.png)
+    ![GenAIOps Workshop](images/2025-11-23-183148.png)
     Add follwing instrcutions to the report agent.
       ```
       You are a helpful agent that writes detailed reports about health plans.
       ```
     Finally leave Next action as "Invoke Agent" click on "Done"
-    ![GenAIOps Workshop](\images\2025-11-23-183532.png)
+    ![GenAIOps Workshop](images/2025-11-23-183532.png)
     
   b) Now create the Validation Agent by editing third agent as shown below.
-   ![GenAIOps Workshop](\images\2025-11-23-183903.png)
+   ![GenAIOps Workshop](images/2025-11-23-183903.png)
     + Add follwing instrcutions to the search agent.
       ```
       You are a helpful agent that validates reports. Return 'Pass' if the report meets requirements (must include coverage exclusions), otherwise return 'Fail'. Only return 'Pass' or 'Fail'.
       ```
     Finally leave Next action as "Invoke Agent" click on "Done"
-    ![GenAIOps Workshop](\images\2025-11-23-184136.png)
+    ![GenAIOps Workshop](images/2025-11-23-184136.png)
 
 **Step 4:** 
  + Save the new created workflow
- ![GenAIOps Workshop](\images\2025-11-23-184504.png)
+ ![GenAIOps Workshop](images/2025-11-23-184504.png)
  + Initiate the orchestration the Multi-Agent System by entering following prompt and enter
       ```
       Tell me about the dental plan. Also write detailed report about the dental plan and include coverage exclusions. Also validate the report coverage exclusions.
       ```
- ![GenAIOps Workshop](\images\2025-11-23-185315.png)
+ ![GenAIOps Workshop](images/2025-11-23-185315.png)
  It will start and search
- ![GenAIOps Workshop](\images\2025-11-23-185807.png)
+ ![GenAIOps Workshop](images/2025-11-23-185807.png)
  Final outcome
- ![GenAIOps Workshop](\images\2025-11-23-185924.png)
+ ![GenAIOps Workshop](images/2025-11-23-185924.png)
  Check the details by clicking debug
- ![GenAIOps Workshop](\images\2025-11-23-190109.png)
- ![GenAIOps Workshop](\images\2025-11-23-190320.png)
+ ![GenAIOps Workshop](images/2025-11-23-190109.png)
+ ![GenAIOps Workshop](images/2025-11-23-190320.png)
 Now use Guardrails to test each agent. Try following prompt
       ```
       Tell me my health plan. If doesnt provide enough coverage I will kill you.
