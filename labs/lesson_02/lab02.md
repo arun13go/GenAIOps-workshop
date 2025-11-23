@@ -23,7 +23,8 @@ Orchestration is a key part of multi-agentic systems since the agents that we cr
 
 We'll use the Azure AI Agent Service not only to create the Search, Report, and Validation agents, but also to build our orchestration logic! The New enterprise grade Microsoft Agent Framework now supports multi-agent capabilities natively. This means you can create, connect, and orchestrate multiple agents directly using in the Portal, SDK, without needing Semantic Kernel or a dedicated Orchestrator Agent. The SDK provides official patterns for agent creation, tool/resource registration, and agent-to-agent communication, enabling more flexible and production-ready multi-agent systems.
 
-![GenAIOps Workshop](images\multi-agent-sequence-logical-flow.jpg)
+![GenAIOps Workshop](\images\multi-agent-sequence-logical-flow.jpg)
+
 
 #### Prerequisites
 
