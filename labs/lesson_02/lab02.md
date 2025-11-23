@@ -95,8 +95,7 @@ An Azure subscription is required, where you can create an AI Project along with
 
   b) Now create the Report Agent by editing the second agent as shown below.
     ![GenAIOps Workshop](images/2025-11-23-183148.png)
-    
-    Copy and add the following instructions to the Report Agent.
+  + Copy and add the following instructions to the Report Agent.
       ```
       You are a helpful agent that writes detailed reports about health plans.
       ```
