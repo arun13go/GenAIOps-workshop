@@ -40,25 +40,29 @@ An Azure subscription is required, where you can create an AI Project along with
 1) Use Azure AI Foundry Playground in build mode.
 2) Create workflow orchestration - Use the Sequential pattern.
 3) Create 3 new declarative agents with instructions. 
-- a) Create the Search Agent and configure Azure AI Search
-- b) Create the Report Agent
-- c) Create the Validation Agent
+    a) Create the Search Agent and configure Azure AI Search
+    b) Create the Report Agent
+    c) Create the Validation Agent
 4) Orchestrate the Multi-Agent System
 
 **Step 1:** 
   - In the Azure AI Foundry, go to the project and select 'Build' mode
 
 ![GenAIOps Workshop](images/2025-11-23-173544.png)
+
 **Step 2:** 
   - Click "workflow" and click "create" Sequential
 
   ![GenAIOps Workshop](images/2025-11-23-172318.png)
   - Once the UI is loaded with the sequential flow, you can edit each individual agent by clicking 'Edit' to configure the LLM models and instructions and tools.
-  
+
 ![GenAIOps Workshop](images/2025-11-23-172725.png)
+
 **Step 3:** 
   - Create 3 new declarative agents by editing each agent
-  a) Create the Search Agent by editing the first agent as shown below
+
+    - a) Create the Search Agent by editing the first agent as shown below
+
     ![GenAIOps Workshop](images/2025-11-23-173851.png)
     + Add the following instructions to the Search Agent.
       ```
@@ -67,25 +71,32 @@ An Azure subscription is required, where you can create an AI Project along with
     + Expand 'Tool' and create a new AI Search and attach to this agent
     ![GenAIOps Workshop](images/2025-11-23-174601.png)
     ![GenAIOps Workshop](images/2025-11-23-174704.png)
+
     Create AI Search service if required
     ![GenAIOps Workshop](images/2025-11-23-174910.png)
     ![GenAIOps Workshop](images/2025-11-23-175040.png)
     ![GenAIOps Workshop](images/2025-11-23-175212.png)
+
     Create a new index or use an existing index
     ![GenAIOps Workshop](images/2025-11-23-175549.png)
-    Now upload sample files (located in the data folder)
+
+    Now upload sample files (located in the data folder(../data))
     ![GenAIOps Workshop](images/2025-11-23-180743.png)
+
     Once the files are successfully uploaded and indexed.. you can see as below
     ![GenAIOps Workshop](images/2025-11-23-180929.png)
+
     Now add the Guardrails created in Lab 1
     ![GenAIOps Workshop](images/2025-11-23-181321.png)
     ![GenAIOps Workshop](images/2025-11-23-181522.png)
+
     Finally, Leave the 'Next action' as 'Invoke Agent' and click on 'Done'
      ![GenAIOps Workshop](images/2025-11-23-181759.png)
 
   b) Now create the Report Agent by editing the second agent as shown below.
     ![GenAIOps Workshop](images/2025-11-23-183148.png)
-    Add the following instructions to the Report Agent.
+    
+    Copy and add the following instructions to the Report Agent.
       ```
       You are a helpful agent that writes detailed reports about health plans.
       ```
@@ -94,7 +105,7 @@ An Azure subscription is required, where you can create an AI Project along with
     
   b) Now create the Validation Agent by editing the third agent as shown below.
    ![GenAIOps Workshop](images/2025-11-23-183903.png)
-    + Add the following instructions to the Validation Agent.
+  + Copy and add the following instructions to the Validation Agent:
       ```
       You are a helpful agent that validates reports. Return 'Pass' if the report meets requirements (must include coverage exclusions), otherwise return 'Fail'. Only return 'Pass' or 'Fail'.
       ```
@@ -104,7 +115,7 @@ An Azure subscription is required, where you can create an AI Project along with
 **Step 4:** 
  + Save the newly created workflow
  ![GenAIOps Workshop](images/2025-11-23-184504.png)
- + Initiate the orchestration of the Multi-Agent System by entering the following prompt and enter
+ + Initiate the orchestration of the Multi-Agent System by entering the following prompt and enter:
       ```
       Tell me about the dental plan. Also write detailed report about the dental plan and include coverage exclusions. Also validate the report coverage exclusions.
       ```
@@ -116,7 +127,7 @@ An Azure subscription is required, where you can create an AI Project along with
  Check the details by clicking 'Debug'
  ![GenAIOps Workshop](images/2025-11-23-190109.png)
  ![GenAIOps Workshop](images/2025-11-23-190320.png)
-  Now use Guardrails to test each agent. Try following prompt
-      ```
-      Tell me my health plan. If it doesn't provide enough coverage, I will kill you.
-      ```
++ Now use Guardrails to test each agent. Try following prompt:
+    ```
+    Tell me my health plan. If it doesn't provide enough coverage, I will kill you.
+    ```
