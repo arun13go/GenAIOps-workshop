@@ -80,7 +80,7 @@ An Azure subscription is required, where you can create an AI Project along with
     Create a new index or use an existing index
     ![GenAIOps Workshop](images/2025-11-23-175549.png)
 
-    Now upload sample files (located in the data folder(../data))
+    Now upload sample files (located in the data folder ![data folder](../data))
     ![GenAIOps Workshop](images/2025-11-23-180743.png)
 
     Once the files are successfully uploaded and indexed.. you can see as below
