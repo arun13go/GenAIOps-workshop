@@ -2,13 +2,12 @@
 
 ## Overview
 
-This lab explores Azure AI Foundry's evaluation capabilities through three distinct approaches: workflow evaluation using synthetic data, automated agent evaluation with custom metrics, and manual human evaluation. You'll learn how to measure AI agent performance using both quantitative and qualitative methods.
+This lab explores Azure AI Foundry's evaluation capabilities through two complementary approaches: automated agent evaluation with quantitative metrics and manual human review for qualitative insights. You'll learn how to measure AI agent performance accurately and comprehensively using the ValidationNorthwind agent as an example.
 
 ## Prerequisites
 
 - Completion of Labs 1 & 2
 - Access to Azure AI Foundry project
-- ValidationNorthwind agent deployed from Lab 2
 
 ## Objectives
 
@@ -131,6 +130,14 @@ This helps us measure how accurately the agent validates insurance reports for e
 
 ![Agent Evaluation Running](images/agent-evaluation-running.png)
 
+### Verification
+
+Once the evaluation completes:
+1. Review the F1 Score results for each test case
+2. Check the overall evaluation metrics dashboard
+3. Examine individual test case results to understand where the agent succeeded or failed
+4. Compare results against your expected outcomes from the `validation-test-data.jsonl` file
+
 ## Part 2: Agent Evaluation - Manual Human Review
 
 While automated metrics provide quantitative measurements, human evaluation captures qualitative insights, edge cases, and nuanced behaviors that automated metrics may miss. In this section, you'll create a human evaluation template and manually test agent responses.
@@ -164,12 +171,9 @@ While automated metrics provide quantitative measurements, human evaluation capt
 
 ![Set Evaluation Active](images/set-evaluation-active.png)
 
-### Step 3: Apply Human Evaluation
+### Step 3: Understanding Human Evaluation Use Cases
 
-1. Once the template is active, navigate to a completed evaluation run.
-2. Human evaluators can now review agent responses using the Exclusion Checker template.
-3. For each test case, evaluators can provide thumbs up/down feedback on whether the agent correctly identified exclusions.
-4. This qualitative data complements automated metrics like F1 Score.
+Once your template is active, human evaluators can review agent responses in evaluation runs using the Exclusion Checker template. For each test case, evaluators provide thumbs up/down feedback on whether the agent correctly identified exclusions. This qualitative data complements automated metrics like F1 Score.
 
 **When to use Human Evaluation:**
 - Validating subjective qualities (helpfulness, tone, appropriateness)
@@ -204,7 +208,6 @@ NorthWind Health Insurance Plan offers extensive medical coverage including prev
 
 7. The agent should return **"Pass"** since exclusions are clearly stated.
 
-
 ### Step 5: Provide Manual Feedback on Agent Responses
 
 1. After the agent responds, notice the **feedback icon** (clipboard/document icon) that appears under the agent's response.
@@ -224,7 +227,30 @@ NorthWind Health Insurance Plan offers extensive medical coverage including prev
 - Builds a dataset of human-validated responses for future improvements
 - Provides qualitative insights into agent performance
 
+### Step 6: View Human Evaluation Results
 
+1. Navigate back to the **ValidationNorthwind** agent's **Evaluation** tab.
+2. Click on the **Human Evaluation** sub-tab.
+3. Click on the **Exclusion Checker** template in the template list.
+4. Find your evaluation session in the **Agent responses** list and click on it.
+5. Review the evaluation results including:
+   - Agent responses for each test case
+   - Your manual feedback (thumbs up/down)
+   - The complete JSON output showing the feedback details
+
+![Human Evaluation Results](images/human-evaluation-results.png)
+
+This view allows you to see all the manual evaluations you've conducted and aggregate insights from human feedback across multiple test cases.
+
+### Verification
+
+After completing manual testing:
+1. Confirm the agent correctly identifies reports with exclusions (should return "Pass")
+2. Confirm the agent correctly identifies reports without exclusions (should return "Fail")
+3. Verify your manual feedback has been saved in the Exclusion Checker template
+4. Review how manual feedback complements the automated F1 Score metrics from Part 1
+
+Further reading https://learn.microsoft.com/en-us/azure/ai-foundry/observability/how-to/human-evaluation?view=foundry
 
 ## Explore Further
 
@@ -266,18 +292,18 @@ The report writer generates formatted documents. Consider:
 ## Summary
 
 In this lab, you learned how to:
-- Create evaluations using synthetic data generation
-- Configure and run automated evaluations with built-in evaluators
 - Set up agent-specific evaluations with custom datasets
 - Use the F1 Score metric to measure agent accuracy in GenAI contexts
-- Interpret evaluation results to improve AI applications
+- Create human evaluation templates for manual review
+- Manually test agents and provide qualitative feedback
+- Understand when to use automated vs. manual evaluation approaches
 
 Key takeaways:
-- **Synthetic data** is useful for quick testing and generating diverse scenarios
 - **Custom datasets** with expected responses enable precise accuracy measurements
+- **F1 Score in GenAI** measures word-level overlap between generated and expected responses, making it ideal for categorical responses
+- **Human evaluation** captures qualitative insights and edge cases that automated metrics miss
+- **Combining automated and manual evaluation** provides comprehensive assessment of agent performance
 - **Different evaluators** serve different purposes (quality vs. accuracy vs. safety)
-- **F1 Score in GenAI** measures word-level overlap between generated and expected responses
-- **Agent evaluations** can validate specific business logic and decision-making capabilities
 
 ## Part 3: Workflow Evaluation with Synthetic Data (WIP)
 
