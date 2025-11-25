@@ -130,13 +130,23 @@ This helps us measure how accurately the agent validates insurance reports for e
 
 ![Agent Evaluation Running](images/agent-evaluation-running.png)
 
-### Verification
+### Step 10: View Automated Evaluation Results
 
-Once the evaluation completes:
-1. Review the F1 Score results for each test case
-2. Check the overall evaluation metrics dashboard
-3. Examine individual test case results to understand where the agent succeeded or failed
-4. Compare results against your expected outcomes from the `validation-test-data.jsonl` file
+1. Once the evaluation completes (status shows "Completed"), the detailed metrics result table will appear.
+2. Review the comprehensive results table showing:
+   - **Run details**: Status, creation time, and creator information
+   - **Detailed metrics result**: A table with all test cases including:
+     - Agent ID, name, and version
+     - Conversation ID for each test
+     - Expected response vs. actual sample output
+     - Query used for testing
+     - Pass/Fail status (showing 1/1 for passed cases)
+3. Click **View JSON** links to see raw data for queries, responses, tool calls, and definitions.
+4. Expand **Run details** to see all properties and download user logs if needed.
+
+![Auto Evaluation Results](images/auto-evaluation-results.png)
+
+This view provides complete transparency into how each test case performed, allowing you to identify patterns in successes and failures.
 
 ## Part 2: Agent Evaluation - Manual Human Review
 
