@@ -5,6 +5,8 @@ Welcome to the GenAIOps workshop! This course will guide you through building, e
 
 - [Workshop contents](https://microsoft.github.io/GenAIOps-workshop/)
 - [Change log](CHANGELOG.md)
+- [Multi Agent Samples](https://github.com/microsoft/azure-trust-agents)
+- [APIM AI Gateway](https://github.com/Azure-Samples/AI-Gateway)
 
 
 
