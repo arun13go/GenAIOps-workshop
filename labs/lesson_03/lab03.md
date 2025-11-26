@@ -384,10 +384,43 @@ Questions about the company health and dental insurance for NorthWind.
 
 ![Evaluation Running](images/evaluation-running.png)
 
+## Stretch Task: Explore Red Teaming
+
+For those who want to dive deeper into AI safety and security, explore the **Red Teaming** capabilities within the Evaluation tab.
+
+### What is Red Teaming?
+
+Red Teaming is a security testing approach that simulates adversarial attacks to identify vulnerabilities in AI systems. It helps you discover how your agent responds to:
+- Harmful or malicious prompts
+- Attempts to bypass safety guardrails
+- Jailbreak attempts
+- Prompt injection attacks
+- Biased or discriminatory content generation
+
+### Where is it?
+
+1. In the left navigation menu, click on **Evaluations**.
+2. Within the Evaluations section, click on the **Red team** tab.
+3. This view shows all red teaming evaluation runs with their status (In progress, Completed, Failed).
+
+![Red Teaming Section](images/red-teaming-section.png)
+
+4. Explore the available red teaming evaluators and attack simulation capabilities.
+5. Consider how you might test the ValidationNorthwind agent for:
+   - Prompt injection attempts to override validation logic
+   - Adversarial inputs designed to produce incorrect Pass/Fail results
+   - Edge cases that might expose safety vulnerabilities
+
+### Further Reading
+
+- [Azure AI Foundry Red Teaming Documentation](https://learn.microsoft.com/azure/ai-studio/concepts/evaluation-approach-gen-ai#risk-and-safety-evaluation)
+- [Responsible AI Safety Evaluations](https://learn.microsoft.com/azure/ai-studio/concepts/evaluation-metrics-built-in?tabs=warning#risk-and-safety-evaluators)
+
 ## Additional Resources
 
 - [Azure AI Foundry Evaluation Documentation](https://learn.microsoft.com/azure/ai-studio/concepts/evaluation-approach-gen-ai)
 - [Azure AI Evaluation SDK](https://learn.microsoft.com/azure/ai-studio/how-to/develop/evaluate-sdk)
 - [Built-in Evaluators Reference](https://learn.microsoft.com/azure/ai-studio/how-to/evaluate-prompts-playground)
 - [Custom Evaluators Guide](https://learn.microsoft.com/azure/ai-studio/how-to/develop/evaluate-sdk#custom-evaluators)
+
 
